@@ -43,15 +43,29 @@ module KendoMVVMReact {
             ]));
             this.set('peopleList', new kendo.data.ObservableObject({
                 'component': PeopleList,
-                'props': { 'people': this.get('people') }
+                'props': { 'people': this.get('people'), onRemovePerson: this.removePerson.bind(this) }
             }));
+        }
+
+        removePerson(person, index) {
+            if (confirm('Are you sure you want to remove ' + person.Name + ' they might be gone forever!?')) {
+                var people = this.get('people');
+                people.splice(index, 1);
+                this.set('people', people);
+                this.set('peopleList', {
+                   'component': PeopleList,
+                    'props': { 'people': this.get('people')},
+                    onRemovePerson: this.removePerson.bind(this)
+                });
+            }
         }
 
         addPerson() {
             if(this.get('name')) {
                 this.people.push({Name: this.get('name')});
             }
-            this.set('peopleList', { 'component': PeopleList, 'props': { 'people': this.get('people') } });
+            this.set('peopleList', { 'component': PeopleList,
+                'props': { 'people': this.get('people'), onRemovePerson: this.removePerson.bind(this) } });
             this.set('name', '');
         }
     }

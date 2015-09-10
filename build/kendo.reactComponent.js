@@ -35,6 +35,9 @@
         refresh: function refresh() {},
         options: {
             name: "ReactComponent"
+        },
+        destroy: function destroy() {
+            React.unmountComponentAtNode($(this.element)[0]);
         }
     });
     ui.plugin(ReactComponent);

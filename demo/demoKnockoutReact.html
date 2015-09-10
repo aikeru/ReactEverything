@@ -10,7 +10,7 @@
   <body id="appBody">
   <div id="appContainer">
     <p>This is a react component showing a knockout-based list of people:</p>
-      <div data-bind="react: { $: PeopleList, props: { people: people } }"></div>
+      <div data-bind="react: { $: PeopleList, props: { people: people, onRemovePerson: removePerson } }"></div>
     <p>This is a knockout form to add more people to the list:</p>
       <div>
           <input type="text" data-bind="value: name" /><button data-bind="click: addPerson">Add Person</button>

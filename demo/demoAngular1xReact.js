@@ -15,7 +15,14 @@ app.controller('mainCtrl', function ($scope) {
       $scope.name = "";
     }
   };
-
+  //$scope.removePerson = function() {
+  //  debugger;
+  //}
+  $scope.removePerson = function(person, index) {
+    if(confirm('Are you sure you want to remove ' + person.Name + ' they might be gone forever!?')) {
+      $scope.peopleArr.splice(index, 1);
+    }
+  };
 });
 
 app.value("PeopleList", PeopleList);

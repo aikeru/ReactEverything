@@ -49,8 +49,7 @@ gulp.task('babel', ['clean'], function() {
 //TODO: I really want to use an intelligent module loader
 //      but I need one that works well for packaged browser libraries.
 gulp.task('package', ['babel', 'babel-demo'], function() {
-   return gulp.src(['./build/common.js',
-   './build/components/**/*.js',
+   return gulp.src(['./build/components/**/*.js',
    './build/kendo.reactComponent.js'])
     .pipe(sourcemaps.init())
     .pipe(concat("kendo.reactComponent.js"))

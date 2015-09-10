@@ -40,6 +40,9 @@
         },
         options: {
             name: "ReactComponent"
+        },
+        destroy: function() {
+          React.unmountComponentAtNode($(this.element)[0]);
         }
     });
     ui.plugin(ReactComponent);

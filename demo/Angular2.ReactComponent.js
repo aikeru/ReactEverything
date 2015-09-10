@@ -10,7 +10,6 @@ ReactComponent.prototype.render = function render(props) {
     this._element);
 };
 ReactComponent.prototype.onChange = function onChange(changes) {
-  console.log('change',changes);
   var propsChanged = false;
   if(changes.props) {
     propsChanged = true;
@@ -26,7 +25,7 @@ ReactComponent.prototype.onChange = function onChange(changes) {
   }
 };
 ReactComponent.prototype.onDestroy = function onDestroy() {
-  console.log('//TODO: destroy react component', arguments);
+  React.unmountComponentAtNode(this._element);
 };
 
 ReactComponent.annotations = [
