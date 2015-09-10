@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>Angular 1.x with React Demo</title>
+</head>
+<body ng-app="app" ng-controller="mainCtrl">
+<div class="content">
+
+    <div class="header">
+        <h1>Angular 1.x with React via ngReact</h1>
+    </div>
+    <p>This is a list of people from a React component powered by angular data:</p>
+    <div>
+        <people-list people="peopleArr" />
+    </div>
+    <p>This is an angular form for adding more people:</p>
+    <div>
+        <input type="text" ng-model="name" />
+        <button ng-click="addPerson()">Add Person</button>
+    </div>
+
+</div>
+
+<script src="../bower_components/angular1x/angular.js"></script>
+<script src="../bower_components/react/react.js"></script>
+
+<script src="../bower_components/ngReact/ngReact.js"></script>
+<script src="PeopleList.js"></script>
+<script src="demoAngular1xReact.js"></script>
+</body>
+</html>

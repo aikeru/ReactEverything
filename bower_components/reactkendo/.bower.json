@@ -1,0 +1,42 @@
+{
+  "name": "reactkendo",
+  "version": "0.1.0",
+  "description": "A series of components enabling the use of Kendo UI with React",
+  "main": "dist/reactKendo.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "react",
+    "kendo"
+  ],
+  "authors": [
+    "aikeru"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aikeru/ReactKendo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "app.js",
+    "gulpfile.js",
+    "package.json",
+    "index.html",
+    "demo",
+    "src",
+    "bin"
+  ],
+  "_release": "0.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.0",
+    "commit": "17ccbeebe19258861f1d36dfb1d729546f9ff7d6"
+  },
+  "_source": "git://github.com/aikeru/ReactKendo.git",
+  "_target": "~0.1.0",
+  "_originalSource": "reactkendo",
+  "_direct": true
+}

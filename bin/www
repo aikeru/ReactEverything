@@ -1,0 +1,17 @@
+import {Server} from 'node-static';
+import http from 'http';
+
+const fileServer = new Server({cache: false });
+
+http.createServer((req, resp) => {
+	req.addListener('end', () => {
+		fileServer.serve(req, resp, (err, result) => {
+			if(err) { 
+				console.error('Error ' + req.url + ' - ' + err.message);
+				resp.writeHead(err.status, err.headers);
+				resp.end();
+			}
+		});
+	}).resume();
+}).listen(8080);
+console.log('Node server should be listening on 8080');

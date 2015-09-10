@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Kendo MVVM with React</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<link rel="stylesheet" href="http://cdn.kendostatic.com/2014.1.318/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2014.1.318/styles/kendo.blueopal.min.css" />
+	<!--<script src="http://cdn.kendostatic.com/2014.1.318/js/kendo.all.min.js"></script>-->
+    <script src="kendo.all.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="../dist/kendo.reactComponent.js"></script>
+  </head>
+  <body id="appBody">
+  <div id="appContainer">
+    <p>This is a react component showing a kendo-based list of people:</p>
+    <div data-role="reactcomponent" data-bind="value: peopleList"></div>
+    <p>Here is a kendo-based form to add more people to the list:</p>
+    <div>
+        <input type="text" data-bind="value: name" />
+        <button data-bind="click: addPerson">Add Person</button>
+    </div>
+
+  </div>
+  <script src="PeopleList.js"></script>
+  <script src="demoKendoMVVMReact.js"></script>
+  </body>
+ </html>
