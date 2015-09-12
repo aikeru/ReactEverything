@@ -27,7 +27,7 @@ Uses /dist/kendo.reactComponent.js, a Kendo UI Widget
 * You have two options to pass the parameters to the react component:
   * Use the ```reactcomponent:``` binding, ie: ```reactcomponent: { component: MyComponent, props: { ... } }```
   * Use the ```value:``` binding, pointing to a prepopulated object on your viewmodel, ie: ```value: componentArgs```
-
+* See the demoKendoMVVMReact.ts example code
 > The ```reactcomponent``` binding ```component``` argument must be a property on the viewmodel. Kendo doesn't allow binding to arbitrary values from, say, ```window``` scope, where components may live.
 
 
