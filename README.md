@@ -43,7 +43,3 @@ I haven't written one yet, but a blog post with instructions for this is here: h
 ## Why?
 
 Because React is awesome and it's one of the few things that can pull off a feat like this. Because packaging a React component is easier than packaging components for many other frameworks.
-
-## Are these all production-ready examples?
-
-No. They are only illustrations. That said, they should all be functional.
