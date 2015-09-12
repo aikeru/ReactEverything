@@ -35,6 +35,7 @@ var KendoMVVMReact;
         function KendoMVVMReactViewModel() {
             _super.call(this);
             this.name = "";
+            this.PeopleList = PeopleList;
             _super.prototype.init.call(this, this);
             this.set('people', new kendo.data.ObservableArray([
                 { Name: "Bob" },
@@ -42,28 +43,21 @@ var KendoMVVMReact;
                 { Name: "Mark" },
                 { Name: "Joe" }
             ]));
-            this.set('peopleList', new kendo.data.ObservableObject({
-                'component': PeopleList,
-                'props': { 'people': this.get('people'), onRemovePerson: this.removePerson.bind(this) }
-            }));
+            //'this' context gets lost when calling back from the react component
+            this.removePerson = this.removePerson.bind(this);
         }
         KendoMVVMReactViewModel.prototype.removePerson = function (person, index) {
+            debugger;
             if (confirm('Are you sure you want to remove ' + person.Name + ' they might be gone forever!?')) {
                 var people = this.get('people');
                 people.splice(index, 1);
                 this.set('people', people);
-                this.set('peopleList', {
-                    'component': PeopleList,
-                    'props': { 'people': this.get('people') },
-                    onRemovePerson: this.removePerson.bind(this)
-                });
             }
         };
         KendoMVVMReactViewModel.prototype.addPerson = function () {
             if (this.get('name')) {
                 this.people.push({ Name: this.get('name') });
             }
-            this.set('peopleList', { 'component': PeopleList, 'props': { 'people': this.get('people'), onRemovePerson: this.removePerson.bind(this) } });
             this.set('name', '');
         };
         return KendoMVVMReactViewModel;
