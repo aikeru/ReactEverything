@@ -1,7 +1,7 @@
 import {Server} from 'node-static';
 import http from 'http';
 
-const fileServer = new Server({cache: false });
+const fileServer = new Server('./public', {cache: false });
 
 http.createServer((req, resp) => {
 	req.addListener('end', () => {

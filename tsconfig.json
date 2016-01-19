@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "sourceMap": true
+  },
+  "files": [
+    "src/kendo/app-demo.ts",
+    "typescript/jquery.d.ts",
+    "typescript/kendo.all.d.ts",
+    "typescript/react.d.ts"
+  ]
+}
