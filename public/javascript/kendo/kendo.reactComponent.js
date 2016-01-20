@@ -89,7 +89,7 @@
                //We, as a react component, shouldn't be changing this
                return this._value;
            } else {
-               React.render(
+               ReactDOM.render(
                    React.createElement(value.componentName || value.component,
                        value.props || {},
                        value.children || []),

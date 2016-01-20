@@ -30,7 +30,7 @@ var KnockoutMixin = {
 // <ul data-bind="react: { $: ToDoList, props: $data }><ul>
 var reactHandler = ko.bindingHandlers.react = {
     render: function ( el, Component, props ) {
-        React.render(
+        ReactDOM.render(
             React.createElement(Component,props),
             el
         );

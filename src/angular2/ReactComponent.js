@@ -21,7 +21,7 @@ export default class ReactComponent {
 
     render(props) {
         console.log('ReactComponent render');
-        React.render(
+        ReactDOM.render(
             React.createElement(this.component,
             this.props || {},
             this.children || []),

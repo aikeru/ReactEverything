@@ -95,7 +95,7 @@ webpackJsonp([1],{
 	        key: 'render',
 	        value: function render(props) {
 	            console.log('ReactComponent render');
-	            React.render(React.createElement(this.component, this.props || {}, this.children || []), this._element);
+	            ReactDOM.render(React.createElement(this.component, this.props || {}, this.children || []), this._element);
 	        }
 	    }, {
 	        key: 'ngOnChange',
