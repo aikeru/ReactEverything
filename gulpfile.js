@@ -5,13 +5,6 @@ var uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     del = require('del');
 
-//TODO:
-//  add jspm or other packager
-//  add eslint
-//  add uglify of some sort, with source map
-//  add watch
-//  add unit test framework, with integration browser tests
-
 gulp.task('watch', function() {
    return gulp.watch(['src/**/*.jsx', 'src/**/*.js', 'demo/**/*.jsx'], ['js']);
 });
